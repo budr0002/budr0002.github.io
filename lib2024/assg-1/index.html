@@ -1,38 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<!-- This is the title of my html document -->
 	<title>Assignment 1</title>
 	<meta charset="utf-8">
-	<meta lang="en">
 </head>
 
 <body>
 	<!-- This is the header within the body -->
-	<header>
+	<header id="header">
 		<h1>Assignment 1</h1>
 	</header>
 	<!-- This is the main within the body -->
-	<main>
+	<main id="main">
+		<!-- First section of the main -->
 		<section>
-			<h1>This is the main Section</h1>
-
-		<div>
-			<p>I am a div</p>
-		</div>
-			<p>I am a paragraph</p>
-			<p>This paragraph has a <br>Break</p>
+			<h2>This is the main Section</h2>
+			<div>
+				<p>I am a div</p>
+				<p>I am a paragraph</p>
+				<p>This paragraph has a <br>Break</p>
+			</div>
 		</section>
-
+		<!-- Second section of the main -->
 		<section>
 			<h3>This is a section</h3>
-
-			<p>This is important part of an section<br>This is less important part of the section</p>
+				<p>This is an important part of a section
+					<br>This is less important part of the section</p>
+			<!-- div within the second section, which includes navigation links inside an unordered list, nested inside the nav element -->
 			<div>
 				<h4>Some links in a Div</h4>
 				<nav>
-					<a href="https://google.ca" title="Google" target="_blank">Google Link</a>
-					<a href="https://amazon.ca" title="Amazon" target="_blank">Amazon Link</a>
+					<ul>
+						<li><a href="https://google.ca" title="Google" target="_blank">Google Link</a></li>
+						<li><a href="https://amazon.ca" title="Amazon" target="_blank">Amazon Link</a></li>
+					</ul>
 				</nav>
 			</div>
 			<div>
@@ -51,7 +53,7 @@
 			</div>
 		</section>
 	</main>
-	<footer>
+	<footer id="footer">
 		<p>This is the footer</p>
 	</footer>
 </body>
