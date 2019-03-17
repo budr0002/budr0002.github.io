@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Assignment 3 - Registration Form</title>
+	<style>
+
+		#title {
+			background-color: lightblue;
+			padding: 10px;
+			margin: 20px;
+		}
+
+		#main {
+			padding: 10px;
+			margin: 20px;
+		}
+		
+		.required {
+			color: red;
+			font-weight: bold;
+		}
+
+		.not-required, .hobbies, p {
+			font-weight: bold;
+		}
+
+		div {
+			margin: 20px;
+		}
+
+		#address-container input, select {
+			margin: 10px;
+		}
+
+		fieldset {
+			margin: 20px;
+			padding: 10px;
+			border-width: 3px;
+		}
+
+		#url-container input {
+			width: 400px;
+		}
+
+		button {
+			background-color: blue;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			font-size: 16px;
+		}
+	</style>
+</head>
+<body>
+	<!-- This div is the container for the registration form, which is inside the body element -->
+	<div id="container" class="container">
+		<!-- Start Header -->
+		<header id="title" class="title">
+			<h1>Registration Form</h1>
+			<p>Please fill out the form below to complete your registration. You will receive a confirmation email within 24 hours.</p> 
+			<p><strong>NOTE: Fields in <span class="required">red</span> are required.</strong></p>
+		</header>
+		<!-- End Header -->
+
+		<!-- Start Main -->
+		<main id="main">
+			<!-- This is the start of the Registration Form -->
+			<form id="reg-form" action="somepage.php" method="post">
+				
+				<div id="firstname-container" class="required">
+					<!-- First Name is required -->
+					<label for="firstname">First Name:</label>
+					<input type="text" name="firstname" id="firstname" placeholder="John" required>
+				</div>
+				
+				<div id="lastname-container" class="required">
+					<!-- Last Name is required -->
+					<label for="lastname" class="required">Last Name:</label>
+					<input type="text" name="lastname" id="lastname" placeholder="Smith" required>
+				</div>
+
+				<div id="email-container" class="required">
+					<!-- email address is a required field -->
+					<label for="email">Email Address:</label>
+					<input type="email" name="email" id="email" placeholder="name@email.com" required>
+				</div>
+
+				<div id="pass-container" class="required">
+					<!-- Password is a required field -->
+					<label for="pass">Password:</label>
+					<input type="Password" name="pass" id="pass" minlength="8" required>
+				</div>
+
+				<div id="intro-container" class="not-required">
+					<!-- This is a text field which is optional -->
+					<label>Tell us something about yourself:</label><br>
+					<textarea name="intro" id="intro" rows="5" cols="50"></textarea>
+				</div>
+
+				<div id="dob-container" class="required">
+					<!-- Date of birth is a required field -->
+					<label for="dob">Date of Birth:<input type="date" name="dob" id="dob" required></label>
+				</div>
+
+				<div id="tel-container" class="not-required">
+					<!-- Mobile number is an optional field -->
+					<label for="cell">Mobile Number:<input type="tel" name="cell" id="cell" placeholder="613-555-1234"></label>
+				</div>
+
+				<div id="gender-container" class="not-required">
+					<!-- Gender selection is not required  -->
+					<p>Gender:</p>
+					<label for="Male">Male</label>
+					<input type="radio" name="gender" id="Male" value="Male">
+					<label for="Female">Female</label>
+					<input type="radio" name="gender" id="Female" value="Female">
+					<label for="Other">Other</label>
+					<input type="radio" name="gender" id="Other" value="Other">
+				</div>
+
+				<div id="address-container" class="required">
+					<!-- Address information is required -->
+
+					<label for="address">Street Address:</label>
+					<input type="text" name="address" id="address" required><br>
+
+					<label for="city">City:</label>
+					<input type="text" name="city" id="city" required><br>
+					
+					<label for="prov">Province:</label>
+					<select name="prov" id="prov">
+						<optgroup label="Provinces">
+							<option value="ab">Alberta</option>
+							<option value="bc">British Columbia</option>
+							<option value="mb">Manitoba</option>
+							<option value="nb">New Brunswick</option>
+							<option value="nl">Newfoundland and Labrador</option>
+							<option value="ns">Nova Scotia</option>
+							<option value="on" selected>Ontario</option>
+							<option value="pe">Prince Edward Island</option>
+							<option value="qc">Quebec</option>
+							<option value="sk">Saskatchewan</option>
+						</optgroup>
+						<optgroup label="Territories">
+							<option value="nt">Northwest Territories</option>
+							<option value="nu">Nunavut</option>
+							<option value="yt">Yukon</option>
+							<option value="oth">Other</option>
+						</optgroup>
+					</select><br>
+
+					<label for="country">Country:</label>
+					<select name="country" id="country">
+						<option value="ca">Canada</option>
+						<option value="us">United States</option>
+						<option value="uk">United Kingdom</option>
+						<option value="fr">France</option>
+						<option value="ge">Germany</option>
+					</select><br>
+
+					<label for="post-code">Postal Code</label>
+					<input type="text" name="post-code" id="post-code" placeholder="A1A 1A1" required>
+				</div>
+
+				<fieldset id="hobbies-container" class="hobbies">
+					<!-- Hobbies and interests checkboxes inside a fieldset, not required -->
+					<legend>What are your hobbies and interests?</legend>
+					<div>
+						
+						<input type="checkbox" name="knit" id="knit">
+						<label for="knit">Knitting</label>
+
+						<input type="checkbox" name="hockey" id="hockey">
+						<label for="hockey">Hockey</label>
+
+						<input type="checkbox" name="wing" id="wing">
+						<label for="wing">Wingsuiting</label>
+
+						<input type="checkbox" name="fire" id="fire">
+						<label for="fire">Firebreathing</label>
+
+						<input type="checkbox" name="wood" id="wood">
+						<label for="wood">Woodworking</label>
+
+						<input type="checkbox" name="blacksmith" id="blacksmith">
+						<label for="blacksmith">Blacksmithing</label>
+
+						<input type="checkbox" name="horse" id="horse">
+						<label for="horse">Horseback Riding</label>						
+
+						<input type="checkbox" name="gaming" id="gaming">
+						<label for="gaming">Gaming</label>						
+						
+						<input type="checkbox" name="butterfly" id="butterfly">	
+						<label for="butterfly">Butterfly Catching</label>						
+
+						<input type="checkbox" name="cats" id="cats">
+						<label for="cats">Herding Cats</label>								
+
+					</div>
+				</fieldset>
+
+				<div id="url-container" class="not-required">
+					<!-- This div is for the website -->
+					<label for="url">Your Website:</label>
+					<input type="url" name="url" id="url" placeholder="http://yourpage@domain.com">
+				</div>
+
+				<!-- This div is for the Submit and Reset buttons -->
+				<div id="submit" class="buttons">
+					<button type="submit">Submit</button>
+                	<button type="reset">Reset</button>
+				</div>
+			</form>
+			<!-- End Registration Form -->
+			
+		</main>
+		<!-- End Main -->
+	</div>
+
+</body>
+</html>
