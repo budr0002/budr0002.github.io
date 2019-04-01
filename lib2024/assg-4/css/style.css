@@ -1,0 +1,257 @@
+@charset "utf-8";
+
+ /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*CSS clearfix*/
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/*  Color Pallete :
+
+	Background Green: #7cc576
+	Background Blue: #6dcff6
+	Text Primary: #000
+	Text Secondary: #040404
+*/
+
+
+/****************************
+   		Desktop Styles 
+   **************************/
+ /*Note: Even though Best Practice is to do Mobile First, I had to start with 
+ the desktop styling so that I could get the page to look like the mock-up,
+ which has Target Screen size of 960px.  Once I had styling in place for that
+ screen size, then I added the Mobile Styles after. */
+
+html {
+	/* Set the font size to 16px for the HTML document */
+	font-size: 100%;
+}
+
+/* Header Styles */
+
+.header {
+	width: 100%;
+	/* Header height is 230px at Target Screen size 960. 
+	  Convert to rem: 230px/16px = 14.375rem */
+	height: 14.375rem;
+	background: #7cc576;
+	font-family: 'Poppins' , sans-serif; 
+	/* font size 36px = 36px/16px = 2.25rem */
+	font-size: 2.25rem;
+}
+
+.title {
+	position: relative;
+	top: 45px;
+	left: 190px;
+	font-weight: 600;
+}
+
+.logo {
+	float: left;
+	/* Width is 115px = 115px/16px = 7.1875rem */
+	width: 7.1875rem;
+	box-sizing: border-box;
+}
+
+.navigation ul {
+	box-sizing: border-box;
+	font-size: 1.25rem;
+	width: 100%;
+	margin-top: 2em;
+	clear: both;
+	text-align: center;
+}
+
+.navigation li {
+	box-sizing: border-box;
+	display: inline-block;
+	border-radius: 5px;	
+	width: calc(25% - 40px);
+	padding: 20px;
+	margin: 15px;
+	background-color: #6dcff6;
+}
+
+.navigation a {
+	box-sizing: border-box;
+	color: #000000;
+	text-align: center;
+	text-decoration: none;
+}
+
+/* Main Content Styles */
+
+#main-content {
+	font: 1em 'Philosopherregular', sans-serif;
+	background-image: url("../img/circles-light.png");
+}
+
+h2 {
+	/* Font size 22px = 22px/16px = 1.375rem */
+	font: bold 1.375rem Poppins , sans-serif;
+}
+
+h3 {
+	/* Font size 18px = 18px/16px = 1.125rem */
+	font: bold 1.125rem Poppins , sans-serif;	
+}
+
+#main-content p {
+	padding-top: 1.25rem;
+}
+
+main p {
+	margin-top: 1em;
+}
+
+.article {
+	box-sizing: border-box;
+	float: left;
+	width: 66%;
+	padding: 1.875rem 1.25rem 0;
+}
+
+.sidebar {
+	box-sizing: border-box;
+	color: #040404;
+	float: right;
+	width: 34%;
+	padding: 2rem 1.25rem 0;
+}
+
+.sidebar img {
+	padding: 1.5rem 0;
+}
+
+.images {
+	box-sizing: border-box;
+	clear: both;
+	width: 100%;
+	padding: 1.25rem;
+}
+
+.img1,
+.img2,
+.img3 {
+	box-sizing: border-box;
+	display: inline-block;
+	padding: 1rem;
+	width: 33%;
+	text-align: center;
+}
+
+figcaption {
+	margin-top: 0.5em;
+}
+
+ /*Footer Styles */
+
+footer {
+	font-family: 'Philosopherregular', sans-serif;
+	box-sizing: border-box;
+	width: 100%;
+	 /*Footer height is 110px = 110px/16px = 6.875em*/
+	height: 6.875em;
+	background: #7cc576;
+}
+
+.footer-text {
+	box-sizing: border-box;
+	float: left;
+	 /*line height same as footer height to acheive centering vertically */
+	line-height: 6.875em;
+	margin-left: 0.625em;
+}
+
+.foot-nav {
+	box-sizing: border-box;
+	float: right;
+	margin-top: 1.875em;
+	margin-right: 1.25em;
+}
+
+.foot-nav a {
+	padding: 0.5em;
+}
+
+/***********************
+	MOBILE STYLES
+/**************************/
+
+@media only screen and (max-width: 768px) {
+
+	.article {
+		clear: both;
+		width: auto;
+	}
+
+	.sidebar {
+		clear: both;
+		width: auto;
+		padding: 1rem;
+	}
+
+	.img1 ,
+	.img2 ,
+	.img3 {
+		box-sizing: border-box;
+		display: block;
+	}
+
+	.foot-nav a {
+		padding: 0;
+	}
+}
