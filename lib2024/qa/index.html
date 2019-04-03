@@ -82,14 +82,47 @@
 	</li>
 	<!-- Question 13 -->
 	<li>
-		<p><strong>Qus:</strong></p>
-		<p><strong>Ans:</strong></p>
+		<p><strong>Qus:</strong>Create CSS block to center an element both horizontally and vertically that has position:absolute and has width:200px and height:200px.</p>
+		<p><strong>Ans:</strong> element {<br>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; position: absolute;<br>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; width: 200px;<br>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; height: 200px;<br>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; margin: 0 auto;<br>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</p>
 	</li>
 	<!-- Question 14 -->
 	<li>
-		<p><strong>Qus:</strong></p>
-		<p><strong>Ans:</strong></p>
+		<p><strong>Qus:</strong>Create CSS keyframes block called "spin" that rotates an element.</p>
+		<p><strong>Ans:</strong> @keyframes spin {<br>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; from { <br>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; transform: rotate(0deg);<br>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; to { <br>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; transform: rotate(360deg);<br>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
 	</li>	
+	<!-- Question 15 -->
+	<li>
+		<p><strong>Qus:</strong>Create CSS animation block to rotate an element that has the following properties :
+			<ul>
+				<li>class "rotate-me"</li>
+				<li>It rotates 5 times at intervals of 0.5s with "linear" transition using animation keyframes "spin"</li>
+			</ul>
+		 </p>
+		<p><strong>Ans:</strong> .rotate-me {<br>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; animation: spin 0.5s linear 5;<br>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}
+		</p>
+		<p> OR: <br>
+		 .rotate-me {<br>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; animation-name: spin;<br> 
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; animation-duration: 0.5s;<br>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; animation-timing-function: linear;<br>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; animation-iteration-count: 5;<br>
+			}
+		</p>
+	</li>		
 </ol>
 </body>
 
