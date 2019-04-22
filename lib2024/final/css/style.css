@@ -1,0 +1,420 @@
+@charset "utf-8";
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*********************
+	MOBILE FIRST       
+***********************/
+
+/* Set font size and max width for HTML document */
+html {
+	font-size: 100%;
+	max-width: 1024px;
+}
+
+/* Set fonts for HTML document */
+
+@font-face {
+	font-family: 'Barlow' , sans-serif;
+	src: url("fonts/barlow_regular_macroman/stylesheet.css");
+}
+
+.col-main, .col-footer {
+	width: 100%;
+}
+
+/* Header styles */
+
+h1 {
+	font-family: 'Lobster', cursive;
+	font-size: 3em;
+	color: #72a9ae;
+}
+
+.logo {
+	float: left;
+	width: 190px;
+	padding: 1rem;
+}
+
+.desktop-nav {
+	display: none;
+}
+
+.mobile-nav-container {
+	background: #72a9ae;
+	float: right;
+	width: 20em;
+	display: none;
+}
+
+.mobile-nav-container li {
+	background: #72a9ae;
+	padding: 10px;
+}
+
+.mobile-nav a {
+	display: inline-block;
+	width: 100%;
+	font-family: 'Montserrat' , sans-serif;
+	text-decoration: none;
+	color: #000;
+}
+
+.ham {
+	float: right;
+	padding: 1em;
+	cursor: pointer;
+}
+
+.fa-bars {
+	font-size: 3em;
+}
+
+.mobile-nav-container {
+	position: relative;
+	clear: both;
+}
+
+
+/* Main Content Styles */
+
+.main {
+	box-sizing: border-box;
+	font-family: 'Barlow' , sans-serif;
+	background: url(../img/light-veneer.png);
+	padding: 1em;
+	width: 100%;
+	clear: both;
+}
+
+.main h2 {
+	font: bold 1.375em 'Montserrat' , sans-serif;
+	color: #72a9ae;
+}
+
+.main .about p {
+	margin-top: 1em;
+}
+
+.image-overlay {
+	display: none;
+}
+
+.image {
+	margin: 1em 0 0 1em;
+	max-width: 325px;
+	max-height: 220px;
+	opacity: 0.5;	
+}
+
+.image:hover {
+	box-shadow: 10px 10px 10px rgba(0,0,0,0.5);	
+	opacity: 1;
+	transition: all 1s linear;
+}
+
+.image-overlay {
+	display: none;
+	position: absolute;
+	width: 400%;
+	height: 400%;
+	overflow: hidden;
+	left:5%;
+	top: 5%;
+	border: 1px solid #f1f1f1;
+}
+
+.img-slide.active {
+	display: block;
+}
+
+.col-main, table {
+	margin-top: 1em;
+}
+
+/* Table Styles */
+
+.load-table {
+	display: flex;
+	flex-direction: row;
+}
+
+.table {
+	display: block;
+	clear: both;
+	padding-top: 1em;
+}
+
+th {
+	font: bold 1.125em 'Montserrat' , sans-serif;
+	color: #72a9ae;	
+	text-align: center;
+	background: #fff;	
+}
+
+td {
+	font-family: 'Barlow' , sans-serif;
+	text-align: center;	
+	vertical-align: middle;
+}
+
+tbody tr:nth-child(even) {
+	background: #efefef;
+}
+
+tbody tr:nth-child(odd) {
+	background: #fff;
+}
+
+td, th {
+	border: 1px solid #000;
+	padding: 1em;
+}
+
+/* Profile Styles */
+
+.create-profile div {
+	margin: 1em 0;
+	max-width: 21.25em;
+}
+
+.create-profile input, select {
+	width: 14em;
+	height: 1.5em;
+	vertical-align: middle;
+	float: right;	
+}
+
+button {
+	background-color: #fff;
+	padding: 0.5em 1em;
+	text-align: center;
+	float: right;
+	cursor: pointer;
+}
+
+.profile-info {
+	clear: both;
+	max-width: 300px;
+}
+
+.profile-container {
+	margin-top: 1em;
+	box-shadow: 5px 5px 10px rgba(0,0,0,0.75);
+	background: #fff;
+	padding: 1em 0;
+	text-align: center;
+}
+
+.profile-container p {
+	margin-top: 0.5em;
+}
+
+.fa-user {
+	font-size: 8em;
+	color: #454545; 
+}
+
+.profile-name {
+	color: #72a9ae;
+	font-size: 1.125em; 	
+}
+
+.fa-envelope {
+	color: #72a9ae;
+	margin-top: 0.5em;
+}
+
+/* Footer Styles */
+
+.footer {
+	background: #454545;
+	color: #fff;
+}
+
+.col-footer {
+	box-sizing: border-box;
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+	padding: 0 0 1em 1em
+}
+
+.footer h3 {
+	font: bold 1em 'Montserrat' , sans-serif;
+	padding: 1em 0;
+}
+
+.foot-nav h3,
+.site-address h3 {
+	text-align: left;
+}
+
+.foot-nav a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.foot-nav li {
+	padding: 0.5em 0;
+}
+
+.foot-site-add p {
+	padding: 0.25em 0;
+}
+
+.foot-nav-links,
+.social-media,
+.foot-site-add {
+	text-align: left;
+	margin: 0.5em 0 0 1em;
+}
+
+.social-media li {
+	display: inline;
+}
+
+.facebook {
+	color: #3b5999;
+}
+
+.youtube {
+	color: #cd201f;
+}
+
+.twitter {
+	color: #55acee;
+}
+
+/************************
+	Desktop Styles
+*************************/
+
+@media only screen and (min-width: 768px) {
+
+	.ham {
+		display: none;
+	}
+
+	.mobile-nav-container {
+		display: none;
+	}
+
+	.main-nav-container {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		background: #72a9ae;
+		padding: 1rem;
+	}
+
+	.main-nav-container li {
+		display: inline;
+	}
+
+	.main-nav a {
+		font-family: 'Montserrat' , sans-serif;
+		text-decoration: none;
+		color: #000;
+		padding-right: 1.5rem;
+	}
+
+	.site-content {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.about {
+		width: 62%;
+	}
+
+	.image {
+		width: 38%;
+	}
+
+	.main-profile-container {
+		display: flex;
+		flex-direction: row;		
+	}
+
+	.create-profile {
+		width: 62%;
+	}
+
+	.profile-info {
+		padding-right: 2em;
+		width: 38%;
+	}
+
+	.footer {
+		clear: both;
+		height: 16rem;
+		display: flex;
+		flex-direction: row;
+	}
+
+	.col-footer {
+		margin: 1em;
+		text-align: center;
+		vertical-align: middle;
+	}
+
+	.foot-nav {
+		max-width: 150px;
+	}
+
+}
